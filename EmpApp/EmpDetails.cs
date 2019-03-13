@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeApp
+namespace EmpApp
 {
-    public class EmployeeDetails
+    public class EmpDetails
     {
         public int id
         {

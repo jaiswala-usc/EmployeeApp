@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeApp
+namespace EmpApp
 {
     public class Program
     {
@@ -14,33 +14,35 @@ namespace EmployeeApp
             if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(password))
             {
                 return "Username or password cannot be empty";
-            } else if (userId == "admin" && password == "admin")
+            }
+            else if (userId == "admin" && password == "admin")
             {
                 return "Welcome admin!";
-            } else
+            }
+            else
             {
                 return "Invalid userid or password";
             }
         }
 
-        public List<EmployeeDetails> AllUsers()
+        public List<EmpDetails> AllUsers()
         {
-            List<EmployeeDetails> li = new List<EmployeeDetails>();
+            List<EmpDetails> li = new List<EmpDetails>();
 
-            li.Add(new EmployeeDetails { id = 1, name = "Abhishek", gender = "M", salary = 25 });
-            li.Add(new EmployeeDetails { id = 2, name = "Mohsen", gender = "M", salary = 80 });
-            li.Add(new EmployeeDetails { id = 3, name = "Wyatt", gender = "M", salary = 70 });
-            li.Add(new EmployeeDetails { id = 4, name = "Bob", gender = "M", salary = 120 });
-            li.Add(new EmployeeDetails { id = 5, name = "Megan", gender = "F", salary = 75 });
+            li.Add(new EmpDetails { id = 1, name = "Abhishek", gender = "M", salary = 25 });
+            li.Add(new EmpDetails { id = 2, name = "Mohsen", gender = "M", salary = 80 });
+            li.Add(new EmpDetails { id = 3, name = "Wyatt", gender = "M", salary = 70 });
+            li.Add(new EmpDetails { id = 4, name = "Bob", gender = "M", salary = 120 });
+            li.Add(new EmpDetails { id = 5, name = "Megan", gender = "F", salary = 75 });
 
             return li;
         }
 
-        public List<EmployeeDetails> getDetails(int userId)
+        public List<EmpDetails> getDetails(int userId)
         {
-            List<EmployeeDetails> li1 = new List<EmployeeDetails>();
+            List<EmpDetails> li1 = new List<EmpDetails>();
             Program p = new Program();
-            List<EmployeeDetails> li =  p.AllUsers();
+            List<EmpDetails> li = p.AllUsers();
             foreach (var x in li)
             {
                 if (x.id == userId)
@@ -62,8 +64,8 @@ namespace EmployeeApp
 
             //foreach (var i in x)
             //{
-              //  Console.WriteLine(i.id);
-               // Console.WriteLine(i.name);
+            //  Console.WriteLine(i.id);
+            // Console.WriteLine(i.name);
             //}
         }
     }

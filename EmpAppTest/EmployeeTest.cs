@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using EmployeeApp;
+using EmpApp;
 
 namespace EmpAppTest
 {
     public class EmployeeTest
     {
         Program p = new Program();
-        List<EmployeeDetails> li;
+        List<EmpDetails> li;
 
         [Fact]
         public void checkDetails()
