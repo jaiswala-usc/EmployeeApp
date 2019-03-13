@@ -20,5 +20,5 @@ steps:
   displayName: 'dotnet test $(buildConfiguration)'
   inputs:
     command: test
-    projects: '**/*EmployeeAppTest/*.csproj'
+    projects: '**/*EmpAppTest/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
