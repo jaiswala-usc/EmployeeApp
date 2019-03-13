@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using EmployeeApp;
 
-namespace EmployeeAppTest
+namespace EmpAppTest
 {
     public class EmployeeTest
     {
@@ -28,11 +28,11 @@ namespace EmployeeAppTest
             }
         }
 
-            [Theory]
-            [InlineData("admin","admin")]
-            [InlineData("aj", "123")]
-            [InlineData("","")]
-            public void TestLogin (string userID, string password)
+        [Theory]
+        [InlineData("admin", "admin")]
+        [InlineData("aj", "123")]
+        [InlineData("", "")]
+        public void TestLogin(string userID, string password)
         {
             //Program p = new Program();
             string loginResult = p.Login(userID, password);
