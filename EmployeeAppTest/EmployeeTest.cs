@@ -29,16 +29,16 @@ namespace EmployeeAppTest
         }
 
             [Theory]
-            //[InlineData("admin","admin")]
+            [InlineData("admin","admin")]
             [InlineData("aj", "123")]
-            //[InlineData("","")]
+            [InlineData("","")]
             public void TestLogin (string userID, string password)
         {
             //Program p = new Program();
             string loginResult = p.Login(userID, password);
 
-            //Assert.Matches("Welcome admin!", loginResult);
-            Assert.Matches("Invalid userid or password", loginResult);
+            Assert.Matches("Welcome admin!", loginResult);
+            //Assert.Matches("Invalid userid or password", loginResult);
             //Assert.Matches("Username or password cannot be empty", loginResult);
 
         }
