@@ -30,7 +30,7 @@ namespace EmpAppTest
 
         [Theory]
         [InlineData("admin", "admin")]
-        [InlineData("aj", "12345")]
+        [InlineData("ajais", "12345")]
         [InlineData("", "")]
         public void TestLogin(string userID, string password)
         {
